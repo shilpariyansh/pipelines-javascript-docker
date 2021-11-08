@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: shilpariyanshpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shilpariyanshpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: shilpariyanshpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: shilpariyanshpipelinesjavascriptdocker 
+          image: mycontainer121registry.azurecr.io/shilpariyanshpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
